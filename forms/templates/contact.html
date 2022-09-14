@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation ISAA</title>
+    <style>
+        input[type=text]{
+            height: 20px;
+            width: 170px;
+            padding: 5px;
+        }
+        input[type=password]{
+            height: 20px;
+            width: 170px;
+            padding: 5px;
+        }
+        input:focus:valid
+        {
+            background-color: lemonchiffon;
+            border: 5px solid rgb(142, 255, 142);
+        }
+        input:hover:valid
+        {
+            background-color: lemonchiffon;
+            border: 5px solid rgb(136, 230, 242);
+        }
+        body{
+            background-color: antiquewhite;
+            text-align: center;
+            padding: auto;
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body style="color: rgb(0, 0, 0);">
+<form method="POST">
+{% csrf_token %}
+ {{forms}}
+<input type="submit"> 
+<input type = "reset">
+</fieldset>
+
+</form>
+</body>
+</html>
